@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/767c8019-b6ac-48f6-b7d9-a95daafcfd3a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f0d29864-2a80-439e-864e-425e451c9841
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f0d29864-2a80-439e-864e-425e451c9841
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e7020f2c-a29e-4147-b512-3f034b27ad6d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e7020f2c-a29e-4147-b512-3f034b27ad6d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e482eef4-2e06-4c88-ae6f-71e3ce9815cc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    greetingText: false
+    hintText: false
+    panelHeight: false
+    panelWidth: false
+    scanLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - greetingText: "What should I help you with today?"
+      hintText: "Look at the broken cabinet, then pinch Scan."
+      scanLabel: Scan
+      panelWidth: !<float> 30.000000
+      panelHeight: !<float> 20.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HingeHelperGreetingUI – greeting + Scan button</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string greetingText = "What should I help you with today?" {"hint":"Question shown before the scan"}'
+    - '// @input string hintText = "Look at the broken cabinet, then pinch Scan." {"hint":"Hint line under the greeting"}'
+    - '// @input string scanLabel = "Scan" {"hint":"Label on the scan button"}'
+    - '// @input float panelWidth = 30 {"hint":"Panel width in cm", "widget":"slider", "min":20, "max":40, "step":1}'
+    - '// @input float panelHeight = 20 {"hint":"Panel height in cm", "widget":"slider", "min":14, "max":30, "step":1}'
+    - '// @ui {"widget":"group_end"}'

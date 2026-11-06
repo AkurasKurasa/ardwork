@@ -1,0 +1,133 @@
+- !<AssetImportMetadata/9eaefd46-cb3a-4c37-a102-48c3e7d5ae0a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1c3dc658-9743-40e0-af96-981e9d4530d7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1c3dc658-9743-40e0-af96-981e9d4530d7
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5eb27eae-a260-48a9-8593-f95dea037bbf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5eb27eae-a260-48a9-8593-f95dea037bbf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 03736099-4ba1-4fca-8bb1-8f7443aebc72
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audio: false
+    cabinet: false
+    camera: false
+    checkDurationSec: false
+    checkingText: false
+    doorSnapSec: false
+    fixedText: false
+    fixedTitle: false
+    greeting: false
+    keepFixedPartsGreen: false
+    placeInFrontAtStart: false
+    resultOverviewSec: false
+    scanDurationSec: false
+    scanResultText: false
+    scanResultTitle: false
+    scanStatus: false
+    startDistanceCm: false
+    step1Text: false
+    step2Text: false
+    step3Text: false
+    step4Text: false
+    step5Text: false
+    stepPanel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - greeting: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      scanStatus: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      stepPanel: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      cabinet: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      audio: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scanDurationSec: !<float> 2.000000
+      resultOverviewSec: 2.500000
+      checkDurationSec: 1.500000
+      doorSnapSec: 0.600000
+      placeInFrontAtStart: true
+      startDistanceCm: !<float> 80.000000
+      scanResultTitle: Scan result
+      scanResultText: ""
+      checkingText: Checking…
+      fixedTitle: Fixed!
+      fixedText: The door hangs square again and the hinge is tight.
+      step1Text: ""
+      step2Text: ""
+      step3Text: ""
+      step4Text: ""
+      step5Text: ""
+      keepFixedPartsGreen: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HingeHelperMain – scan → steps → fixed flow</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 greeting {"hint":"Greeting + Scan button panel"}'
+    - "// @input AssignableType_2 scanStatus {\"hint\":\"'Scanning…' card\"}"
+    - '// @input AssignableType_3 stepPanel {"hint":"Step panel beside the hinge"}'
+    - '// @input AssignableType_4 cabinet {"hint":"Virtual cabinet controller (door, ghost, highlights)"}'
+    - '// @input AssignableType_5 audio {"hint":"Sound cues"}'
+    - '// @input SceneObject camera {"hint":"Main camera; used to place the experience in front of the user at start"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Timing</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Timing"}'
+    - "// @input float scanDurationSec = 2 {\"hint\":\"Length of the fake 'scanning…' (seconds)\", \"widget\":\"slider\", \"min\":0.5, \"max\":6, \"step\":0.1}"
+    - '// @input float resultOverviewSec = 2.5 {"hint":"How long every broken part stays lit after the scan, before step 1 (seconds)", "widget":"slider", "min":0, "max":6, "step":0.1}'
+    - "// @input float checkDurationSec = 1.5 {\"hint\":\"Length of the fake 'checking…' after Done (seconds)\", \"widget\":\"slider\", \"min\":0.3, \"max\":4, \"step\":0.1}"
+    - '// @input float doorSnapSec = 0.6 {"hint":"Time for the door to snap square at the end (seconds)", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Placement</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Placement"}'
+    - '// @input bool placeInFrontAtStart = true {"hint":"At start, move the cabinet + panels in front of the user (eye level, facing them)"}'
+    - '// @input float startDistanceCm = 80 {"hint":"Distance from the user to the cabinet door at start (cm)", "widget":"slider", "min":50, "max":150, "step":1}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Text</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Text"}'
+    - '// @input string scanResultTitle = "Scan result" {"hint":"Panel header right after the scan"}'
+    - '// @input string scanResultText = "Top hinge is loose: 2 screws backed out, 1 stripped screw hole. The door hangs crooked." {"hint":"What the (fake) scan found"}'
+    - '// @input string checkingText = "Checking…" {"hint":"Status line while Done is being checked"}'
+    - '// @input string fixedTitle = "Fixed!" {"hint":"Panel header after the last step"}'
+    - '// @input string fixedText = "The door hangs square again and the hinge is tight." {"hint":"Panel text after the last step"}'
+    - '// @input string step1Text = "Look at the door: the top hinge is loose and the door hangs crooked." {"hint":"Step 1 instruction"}'
+    - '// @input string step2Text = "Hold the door up and tighten the loose hinge screws." {"hint":"Step 2 instruction"}'
+    - '// @input string step3Text = "Fix the stripped hole (wooden toothpicks + glue, or a slightly bigger screw), then drive the screw back in." {"hint":"Step 3 instruction"}'
+    - '// @input string step4Text = "Line the door up with the ghost door and tighten everything." {"hint":"Step 4 instruction"}'
+    - '// @input string step5Text = "Close the door to test it. Done." {"hint":"Step 5 instruction"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Highlights</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Highlights"}'
+    - '// @input bool keepFixedPartsGreen = true {"hint":"Keep finished parts glowing green (off = finished parts go dark)"}'
+    - '// @ui {"widget":"group_end"}'

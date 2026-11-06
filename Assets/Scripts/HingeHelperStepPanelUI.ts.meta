@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/ce39e865-4594-461a-a30e-6c284a452121>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1111e466-0fbe-48e6-bed1-8c11c1860e77
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1111e466-0fbe-48e6-bed1-8c11c1860e77
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d5e4899e-788d-4464-ba3b-1c752c485ad0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d5e4899e-788d-4464-ba3b-1c752c485ad0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 16943220-e181-4751-b8b5-2d4b4637cffc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    doneLabel: false
+    fixedColor: false
+    panelHeight: false
+    panelWidth: false
+    statusColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - doneLabel: Done
+      panelWidth: !<float> 30.000000
+      panelHeight: !<float> 20.000000
+      statusColor: !<Vec4> {x: 0.600000, y: 0.950000, z: 1.000000, w: 1.000000}
+      fixedColor: !<Vec4> {x: 0.450000, y: 1.000000, z: 0.550000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HingeHelperStepPanelUI – step number, instruction, Done</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string doneLabel = "Done" {"hint":"Label on the Done button"}'
+    - '// @input float panelWidth = 30 {"hint":"Panel width in cm", "widget":"slider", "min":20, "max":40, "step":1}'
+    - '// @input float panelHeight = 20 {"hint":"Panel height in cm", "widget":"slider", "min":14, "max":30, "step":1}'
+    - "// @input vec4 statusColor = \"{0.6, 0.95, 1.0, 1.0}\" {\"hint\":\"Color of the 'checking…' status line\", \"widget\":\"color\"}"
+    - '// @input vec4 fixedColor = "{0.45, 1.0, 0.55, 1.0}" {"hint":"Color of the header when the repair is finished", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

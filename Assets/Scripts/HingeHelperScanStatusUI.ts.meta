@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/14d04d59-b276-4a62-8cd0-6e42fcaaa6c6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9c3b6139-750f-4056-9fb3-83c2b227e5d0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9c3b6139-750f-4056-9fb3-83c2b227e5d0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 53aee738-d6f2-4e91-8e36-269dd7be8b9e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/53aee738-d6f2-4e91-8e36-269dd7be8b9e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 4317c04e-eb6b-43d4-b750-0b01e2dc0211
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    scanningText: false
+    textColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - scanningText: Scanning
+      textColor: !<Vec4> {x: 0.600000, y: 0.950000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HingeHelperScanStatusUI – \"Scanning…\" card</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Settings</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string scanningText = "Scanning" {"hint":"Message shown while scanning (dots animate after it)"}'
+    - '// @input vec4 textColor = "{0.6, 0.95, 1.0, 1.0}" {"hint":"Text color of the scanning message", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
