@@ -6,6 +6,8 @@
     - !<own> 4218db22-994d-40ca-8a6c-f397e332c012
     - !<own> 870c22db-994f-43a4-9dfe-4ca2b6b2722a
     - !<own> d4310014-981f-4d68-a194-f39c456a49b4
+    - !<own> 3a7812c6-ee15-4218-ad15-b1c1a75d735f
+    - !<own> 5b5cef15-c353-4c80-9075-4a20362e74b5
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -184,8 +186,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -45.000000, y: 2.000000, z: 3.000000}
-    Rotation: {x: 0.000000, y: 29.000000, z: 0.000000}
+    Position: {x: -38.000000, y: 2.000000, z: 3.000000}
+    Rotation: {x: 0.000000, y: 12.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -236,7 +238,6 @@
     checkDurationSec: true
     doorSnapSec: true
     placeInFrontAtStart: true
-    startDistanceCm: true
     scanResultTitle: true
     checkingText: true
     fixedTitle: true
@@ -257,7 +258,8 @@
       checkDurationSec: 1.500000
       doorSnapSec: 0.600000
       placeInFrontAtStart: true
-      startDistanceCm: !<float> 80.000000
+      startDistanceCm: !<float> 120.000000
+      viewCenterLocal: !<Vec2> {x: -22.000000, y: 3.000000}
       scanResultTitle: Scan result
       scanResultText: "Top hinge is loose: 2 screws backed out, 1 stripped screw hole. The door hangs crooked."
       checkingText: Checking…
@@ -640,6 +642,21 @@
     []
   Components:
     - !<own> da2588c7-8e0f-4f0f-b63c-bca53ddbb771
+- !<SceneObject/3a7812c6-ee15-4218-ad15-b1c1a75d735f>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 63d4ae95-0259-4b5e-a05b-5170b81f465a
 - !<SceneObject/3c58e834-649c-4975-8952-3523b714f81b>
   PrefabRemaps:
     []
@@ -834,6 +851,21 @@
     - !<own> e4f1ebfe-5169-4fde-bc79-19e56a91a819
   Components:
     []
+- !<SceneObject/5b5cef15-c353-4c80-9075-4a20362e74b5>
+  PrefabRemaps:
+    []
+  Name: LeafIndex
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fb2f858b-0312-4e90-a591-f8f7b20faa42
 - !<RenderMeshVisual/5e78eedc-0a1b-4f37-8bb6-9eb19168f403>
   PrefabRemaps:
     []
@@ -929,6 +961,22 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/63d4ae95-0259-4b5e-a05b-5170b81f465a>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/653f9b9c-5a2b-49d0-a196-22fd28c06a34>
   PrefabRemaps:
     []
@@ -1706,8 +1754,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -45.000000, y: 2.000000, z: 3.000000}
-    Rotation: {x: 0.000000, y: 29.000000, z: 0.000000}
+    Position: {x: -38.000000, y: 2.000000, z: 3.000000}
+    Rotation: {x: 0.000000, y: 12.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
@@ -1902,6 +1950,22 @@
   ScriptTypes:
     "":
       {}
+- !<ScriptComponent/fb2f858b-0312-4e90-a591-f8f7b20faa42>
+  PrefabRemaps:
+    []
+  Name: LeafIndex
+  Enabled: true
+  ScriptAsset: !<reference> 179e2199-9442-4c03-8e10-26c4038b402f
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/fd27129c-0c5a-4087-a803-03eb55d90281>
   PrefabRemaps:
     []
@@ -1909,8 +1973,8 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: -45.000000, y: 2.000000, z: 3.000000}
-    Rotation: {x: 0.000000, y: 29.000000, z: 0.000000}
+    Position: {x: -38.000000, y: 2.000000, z: 3.000000}
+    Rotation: {x: 0.000000, y: 12.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:

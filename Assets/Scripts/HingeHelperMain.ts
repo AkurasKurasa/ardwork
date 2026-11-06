@@ -89,7 +89,11 @@ export class HingeHelperMain extends BaseScriptComponent {
   @input
   @hint("Distance from the user to the cabinet door at start (cm)")
   @widget(new SliderWidget(50, 150, 1))
-  startDistanceCm: number = 80
+  startDistanceCm: number = 120
+
+  @input
+  @hint("Point on the cabinet (root-local cm, X right / Y up) placed straight ahead of the user at start. Default aims between the step panel and the top hinge so both are in view.")
+  viewCenterLocal: vec2 = new vec2(-22, 3)
   @ui.group_end
 
   @ui.separator
@@ -286,10 +290,14 @@ export class HingeHelperMain extends BaseScriptComponent {
     let look = new vec3(-fwd.x, 0, -fwd.z)
     if (look.length < 0.001) look = new vec3(0, 0, -1)
     look = look.normalize()
-    const pos = camPos.add(look.uniformScale(this.startDistanceCm))
+    const target = camPos.add(look.uniformScale(this.startDistanceCm))
+    const rot = quat.lookAt(look.uniformScale(-1), vec3.up())
+    // Shift the root so the chosen local point (not the root origin) sits straight ahead at eye level.
+    const c = this.viewCenterLocal
+    const offset = rot.multiplyVec3(new vec3(c.x, c.y, 0))
     const t = this.sceneObject.getTransform()
-    t.setWorldPosition(new vec3(pos.x, camPos.y, pos.z))
-    t.setWorldRotation(quat.lookAt(look.uniformScale(-1), vec3.up()))
+    t.setWorldRotation(rot)
+    t.setWorldPosition(new vec3(target.x - offset.x, camPos.y - offset.y, target.z - offset.z))
     print("[HingeHelperMain] placed at " + t.getWorldPosition() + " (camera " + camPos + ")")
   }
 }
